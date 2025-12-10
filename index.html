@@ -1,0 +1,110 @@
+## File: `index.html` (Login Page)
+```html
+
+
+
+
+
+Login - Leaf Disease Detection
+
+
+
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+    }
+    .glass-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#36e27b",
+            "background-light": "#f6f8f7",
+            "background-dark": "#112117",
+          },
+          fontFamily: {
+            "display": ["Spline Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+spa
+
+Smart Leaf Disease Detection Powered by AI Vision
+
+Sign In
+
+
+Email
+
+
+
+mail
+
+
+
+
+Password
+
+
+
+lock
+
+
+
+
+
+Sign In
+
+
+
+Forgot Password?
+Sign Up
+
+
+
+
+
+
+
+
+function handleLogin(e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  
+  // Simple validation (replace with actual authentication)
+  if (email && password) {
+    // Store login state
+    sessionStorage.setItem('isLoggedIn', 'true');
+    sessionStorage.setItem('userEmail', email);
+    // Redirect to dashboard
+    window.location.href = 'dashboard.html';
+  }
+}
+
+
+
+```
